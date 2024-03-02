@@ -11,5 +11,11 @@
             "src": "/(.*)",
             "dest": "app.js"
         }
-    ]
+    ],
+    "functions": {
+        "handlers/clientHandler.js": {
+            "runtime": "nodejs14.x",
+            "includeFiles": "dist/**"
+        }
+    }
 }

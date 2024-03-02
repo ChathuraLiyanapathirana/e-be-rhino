@@ -1,5 +1,6 @@
 node_modules/
 .env
+package-lock.json
 
 Personally I was able to complete all the tasks in time.
 
