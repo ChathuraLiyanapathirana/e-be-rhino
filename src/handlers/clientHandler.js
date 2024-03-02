@@ -1,6 +1,6 @@
-import { Router } from "express";
-import OpenAI from "openai";
-import 'dotenv/config'
+const { Router } = require("express");
+const OpenAI = require("openai");
+require('dotenv').config();
 
 const router = Router();
 
@@ -48,7 +48,7 @@ router.post("/gpt-call", async (req, res, next) => {
 
         } catch (error) {
             console.error("openai Error: ", error);
-            res.status(500).json({ error: response.error });
+            res.status(500).json({ error: error });
         }
     } catch (error) {
         console.error("gpt-call error" + error);
@@ -56,4 +56,4 @@ router.post("/gpt-call", async (req, res, next) => {
     }
 });
 
-export default router;
+module.exports = router;

@@ -1,8 +1,9 @@
-import express, { json } from "express";
+const express = require("express");
+const { json } = require("express");
+const clientHandler = require("./src/handlers/clientHandler.js");
+
 const app = express();
 app.use(json());
-
-import clientHandler from "./src/handlers/clientHandler.js";
 
 app.use("/client", clientHandler);
 
