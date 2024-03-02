@@ -28,7 +28,6 @@ router.post("/gpt-call", async (req, res, next) => {
                 temperature: temperature,
             });
 
-
             console.log("openai Response: ", JSON.stringify(response));
 
             const generatedContent = response.choices[0].message.content;
